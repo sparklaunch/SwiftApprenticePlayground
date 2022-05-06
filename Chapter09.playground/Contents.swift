@@ -107,3 +107,29 @@ else {
 }
 
 print("\(depth2)'s Fibonacci: \(current)")
+
+// TASK 8.
+let depth3 = Int.random(in: 1...12)
+
+for i in 1...depth3 {
+    for j in 1...9 {
+        print("\(i) * \(j) = \(i * j)")
+    }
+}
+
+// TASK 9.
+for sum in 2...12 {
+    print("Sum of the combination: \(sum)")
+    var a = 1
+    var b = 1
+    while a <= 6 {
+        b = 1
+        while b <= 6 {
+            if a + b == sum {
+                print("(\(a), \(b))")
+            }
+            b += 1
+        }
+        a += 1
+    }
+}
