@@ -66,4 +66,4 @@ movements.forEach { direction in
     }
 }
 
-location
+print(location)
