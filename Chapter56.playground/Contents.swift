@@ -41,12 +41,12 @@ extension String {
 "Random Access String"[19]
 
 // TASK 3.
-precedencegroup ExponentiationPrecendence {
-    associativity: right
+precedencegroup ExponentiationPrecedence {
+    associativity: left
     higherThan: MultiplicationPrecedence
 }
 
-infix operator **: ExponentiationPrecendence
+infix operator **: ExponentiationPrecedence
 
 func **<Type: BinaryFloatingPoint>(lhs: Type, rhs: Int) -> Type {
     guard rhs >= .zero else {
@@ -75,7 +75,7 @@ var resultCG = baseCG ** exponent
 // TASK 4.
 infix operator **=
 
-func **=<Type: BinaryFloatingPoint>(lhs: inout Type, rhs: Int) -> Type {
+func **=<Type: BinaryFloatingPoint>(lhs: inout Type, rhs: Int) {
     guard rhs >= .zero else {
         fatalError("Exponent cannot be below zero!!")
     }
@@ -85,7 +85,6 @@ func **=<Type: BinaryFloatingPoint>(lhs: inout Type, rhs: Int) -> Type {
     for _ in 1..<rhs {
         lhs = lhs ** rhs
     }
-    return lhs
 }
 
 resultDouble **= exponent
