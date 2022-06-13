@@ -1,0 +1,11 @@
+{
+    "spaceship_name": "USS Enterprise",
+    "captain": {
+        "name": "Spock",
+        "race": "Human"
+    },
+    "officer": {
+        "name": "Worf",
+        "race": "Klingon"
+    }
+}
